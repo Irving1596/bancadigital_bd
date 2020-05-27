@@ -1,0 +1,60 @@
+version: '3.7'
+services:
+  web: 
+   image: irving1596/bancafront:v1
+   container_name: bancafront
+   ports:
+      - "4200:4200"
+  # volumes:
+  #  - type: bind
+  #   source: ./frontend
+  #    target: /usr/front
+
+   networks:
+       -  netbanca
+  app: 
+    image: irving1596/bancabackend:v1
+    container_name: bancabackend
+    ports:
+      - "3200:3200"
+   # volumes:
+   #  - type: bind
+   #    source: ./backend
+   #    target: /usr/back
+    environment:
+      DB_HOST: bdbanca
+      DB_PORT: 3306
+    depends_on:
+      - bdserver
+    networks:
+      - netbanca
+  bdserver:
+    image: mysql:8.0.20
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    container_name: bdbanca
+    environment:
+       MYSQL_ROOT_PASSWORD: deatnote
+       MYSQL_DATABASE: consultecti
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./BD:/docker-entrypoint-initdb.d
+      - ./BD/mysql:/var/lib/mysql
+    networks:
+      netbanca:
+            aliases:
+              - bdbanca
+            ipv4_address: 172.16.238.10
+            ipv6_address: 2001:3984:3989::10 
+
+networks:
+  netbanca:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      -
+        subnet: "172.16.238.0/24"
+      -
+        subnet: "2001:3984:3989::/64"

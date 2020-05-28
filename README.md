@@ -9,11 +9,14 @@ Tener git instalado.
 
 Clonar el repositorio. Ejecutar `git clone https://github.com/Irving1596/bancadigital_bd.git` 
 
+Situarse en el directorio `bancadigital_bd` 
 
-Situarse en el directorio `bancadigital_bd` y ejecutar `docker-compose up` Esta instruccion levantara los servicios.
+!!!Antes de ejecutar el siguiente paso asegurese de que los puertos `4200, 3200 y 3306` estes disponibles y no los este utilizando algun proceso!!! 
 
+Ejecutar `docker-compose up` Esta instruccion levantara los servicios.
 
-Esperar unos segundo hasta que todos los servicios esten arriba,  luego de que esten up navegar a `http://localhost:4200/login`   
+Esperar unos segundo hasta que todos los servicios esten arriba,  luego de que esten arriba navegar a `http://localhost:4200/login`  
+
 
 # Documentación
 ## Justificación de herramientas  
@@ -54,4 +57,4 @@ Programas requerido:
 <img src="https://github.com/Irving1596/bancadigital_bd/blob/master/MER.png" width="320">
 
 ## Tablero Trello
-- `https://trello.com/b/zTL2SlF0`
+- https://trello.com/b/zTL2SlF0 

@@ -4,7 +4,7 @@ Reto de programación: Recuperar mi usuario de la banca digital
 ## Tier Datos
 ## Pasos para la instalación
 
-Tener git instalado. 
+Tener git y docker instalado. 
 
 
 Clonar el repositorio. Ejecutar `git clone https://github.com/Irving1596/bancadigital_bd.git` 

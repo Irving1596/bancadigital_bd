@@ -11,7 +11,7 @@ Clonar el repositorio. Ejecutar `git clone https://github.com/Irving1596/bancadi
 
 Situarse en el directorio `bancadigital_bd` 
 
-!!!Antes de ejecutar el siguiente paso asegurese de que los puertos `4200, 3200 y 3306` estes disponibles y no los este utilizando algun proceso!!! 
+!!!Antes de ejecutar el siguiente paso asegurese de que los puertos `4200, 3200 y 3306` esten disponibles y no esten siendo utilizados por otros procesos!!! 
 
 Ejecutar `docker-compose up` Esta instruccion levantara los servicios.
 

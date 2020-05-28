@@ -48,7 +48,10 @@ Programas requerido:
 
 ## Base de Datos 
 - `El script SQL DDL esta en el repositorio`
+
 - `Diagrama de entidad y relación`
 
-##Tablero Trello
+<img src="https://github.com/Irving1596/bancadigital_bd/blob/master/MER.png" width="320">
+
+## Tablero Trello
 - `https://trello.com/b/zTL2SlF0`

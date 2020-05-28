@@ -17,6 +17,13 @@ Ejecutar `docker-compose up` Esta instruccion levantara los servicios.
 
 Esperar unos segundo hasta que todos los servicios esten arriba,  luego de que esten arriba navegar a `http://localhost:4200/login`  
 
+Datos
+| Cedula|Pasaporte | Pin |
+| ------------- | ------------- |
+| 1234567890 | 1234  |
+| 1111122222 | 1111 |
+
+Tambien con el endpoint http://localhost:3200/cliente_recovery puede listar los usuarios almacenados en la BD
 
 # Documentación
 ## Justificación de herramientas  

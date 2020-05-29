@@ -86,6 +86,8 @@ SET @saved_cs_client     = @@character_set_client;
 /*!50503 SET character_set_client = utf8mb4 */;
 /*!50001 CREATE VIEW `credenciales_view` AS SELECT 
  1 AS `identificacion`,
+ 1 AS `celular`,
+ 1 AS `correo`,
  1 AS `nombre_usuario`,
  1 AS `password`*/;
 SET character_set_client = @saved_cs_client;
@@ -103,7 +105,7 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `credenciales_view` AS select `C`.`identificacion` AS `identificacion`,`CC`.`nombre_usuario` AS `nombre_usuario`,`CC`.`password` AS `password` from (`cliente` `C` join `cliente_credenciales` `CC`) where (`C`.`id` = `CC`.`id_cliente`) */;
+/*!50001 VIEW `credenciales_view` AS select `C`.`identificacion` AS `identificacion`,`C`.`celular` AS `celular`,`C`.`correo` AS `correo`,`CC`.`nombre_usuario` AS `nombre_usuario`,`CC`.`password` AS `password` from (`cliente` `C` join `cliente_credenciales` `CC`) where (`C`.`id` = `CC`.`id_cliente`) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -117,4 +119,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-27 15:58:01
+-- Dump completed on 2020-05-29  2:40:45
